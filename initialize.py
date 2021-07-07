@@ -9,7 +9,6 @@ def install_libraries():
 
 def edit_file():
     file_path = "/etc/systemd/system/dbus-org.bluez.service"
-    file_path = "/home/pi/BlueTooth/BlueToothPolished/dbus-org.bluez.service"
     read = open(file_path, "r")
 
     list_of_lines = read.readlines()
