@@ -15,10 +15,12 @@ First clone this repository onto your Raspberry Pi using the following command
     <code>
         git clone https://github.com/paccionesawyer/vuforia-spatial-RPI-SPIKE-Bluetooth.git
     </code>
-Then if you would like to add a Spike Prime, turn it on and press the bluetooth button. Once it is blinking run the following command in the cloned repository.
+<br>
+Then if you would like to add a Spike Prime, turn it on and press the bluetooth button. Once it is blinking run the following command in the cloned repository. <br>
     <code>
         python3 setup_bluetooth.py
     </code>
+<br>
 The built in command-line user-interface will take you through the rest of the setup. (If you would like to use it you must bind your device everytime you restart your Pi)
 Once the setup is done, all you need to do is start the Edge Server like normal, and set an image target.
 </details>
