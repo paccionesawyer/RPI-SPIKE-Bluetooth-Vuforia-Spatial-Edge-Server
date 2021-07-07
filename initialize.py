@@ -30,6 +30,16 @@ def edit_file():
 
     write.close()
     
+def init_bluetoothctl():
+    os.system("sudo service bluetooth start")
+    os.system("sudo bluetoothctl")
+    os.system("power on")
+    os.system("pairable on")
+    os.system("discoverable on")
+    os.system("agent on")
+    os.system("default-agent")
+    os.system("quit")
+    
 def main():
     install_libraries()
     edit_file()
