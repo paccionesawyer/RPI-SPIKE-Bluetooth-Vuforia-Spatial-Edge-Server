@@ -42,7 +42,7 @@ def init_bluetoothctl():
 def main():
     install_libraries()
     edit_file()
-
+    init_bluetoothctl()
     os.system("sudo reboot")
 
 if __name__ == "__main__":
