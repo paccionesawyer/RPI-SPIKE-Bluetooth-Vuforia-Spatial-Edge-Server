@@ -88,7 +88,7 @@ def edit_bluetooth(name, mac):
     bluetooth_file = open("rfBind.sh", 'a')
     bluetooth_file.write('\necho "Attempting to Bind to ' + name +' - MAC Address '+ mac + '"\n')
     bluetooth_file.write('sudo rfcomm bind ' + port + " " + mac + '\n')
-    bluetooth_file.write("sudo ampy --port /dev/rfcomm" + port + " run test.py\n")
+    bluetooth_file.write("sudo ampy --port /dev/rfcomm" + port + " run test_connection.py\n")
     bluetooth_file.close()
 
     release_file = open("rfRelease.sh", 'a')
