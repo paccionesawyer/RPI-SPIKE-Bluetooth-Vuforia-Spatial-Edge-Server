@@ -22,7 +22,7 @@ Next you will need to edit a line and add a line in the file that can be accesse
 
 Edit the line `ExecStart=/usr/lib/bluetooth/bluetoothd` to read `ExecStart=/usr/lib/bluetooth/bluetoothd -C`, and insert the line `ExecStartPost=/usr/bin/sdptool add SP` immediately afterwards.
 
-Now reboot your Pi one last time by doing 
+Now reboot your Pi one last time by doing
 
     sudo reboot
 
@@ -59,7 +59,7 @@ When you are done release the port
 ### Step 2: Creating a New Image Target
 
 * To add another SPIKE Prime, we need to be able to attach it to a new image target
-* Checkout our YouTube Tutorial video: https://youtu.be/TBEV5K3dprA
+* Checkout our YouTube Tutorial video: <https://youtu.be/TBEV5K3dprA>
 
 ### Step 3: Duplicating Files
 
@@ -87,15 +87,19 @@ When you are done release the port
 <details>
 <summary><b>Python Script</b></summary>
 
+### Step 1: Download Bluetooth (NOT WORKING Follow Step 1 of DIY and then continue here)
+
 First clone this repository onto your Raspberry Pi using the following command
 
     git clone https://github.com/paccionesawyer/vuforia-spatial-RPI-SPIKE-Bluetooth.git
 
-First change into the directory `cd vuforia-spatial-RPI-SPIKE-Bluetooth` and then run the first program, this will reboot your Spike Prime. It is downloading the necessary files to your device and setting up bluetooth. This only needs to be run once and corresponds to Step 1 of the DIY section.
+Then change into the directory `cd vuforia-spatial-RPI-SPIKE-Bluetooth` and then run the first program, this will reboot your Spike Prime. It is downloading the necessary files to your device and setting up bluetooth. This only needs to be run once and corresponds to Step 1 of the DIY section.
 
     sudo python3 initialize.py 
 
-Then if you would like to add a Spike Prime, turn it on and press the bluetooth button. Once it is blinking run the following command.
+### Step 2: Add a Spike-Prime
+
+If you would like to add a Spike Prime, turn it on and press the bluetooth button. Once it is blinking run the following command.
 
     python3 setup_bluetooth.py
 
