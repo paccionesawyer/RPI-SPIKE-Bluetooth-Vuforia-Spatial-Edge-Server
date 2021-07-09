@@ -58,11 +58,14 @@ def pair_device(mac):
     '''
     Pairs and Trusts the mac address of the new device using bluetoothctl
     '''
-    p = pexpect.spawn('bluetoothctl', encoding='utf-8')
-    p.logfile_read = sys.stdout
-    p.expect("#")
-    p.sendline("pair " + mac)
-    p.sendline("trust " + mac)
+    os.system('bluetoothctl pair ' + mac)
+    os.system('bluetoothctl trust ' + mac)
+
+#     p = pexpect.spawn('bluetoothctl', encoding='utf-8')
+#     p.logfile_read = sys.stdout
+#     p.expect("#")
+#     p.sendline("pair " + mac)
+#     p.sendline("trust " + mac)
 
 def edit_bluetooth(name, mac):
     '''
